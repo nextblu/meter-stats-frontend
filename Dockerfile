@@ -7,4 +7,5 @@ RUN npm install -g grunt-cli
 RUN grunt poa
 
 EXPOSE  3000
-CMD ["WS_SECRET='metermonitorsecret'", "npm", "start"]
+ENV WS_SECRET="metermonitorsecret"
+CMD ["npm", "start"]
